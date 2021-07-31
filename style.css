@@ -65,6 +65,7 @@ p, h1, h2, h3, h4, h5, a {
         color:black;
         text-decoration: none;
         padding-bottom:2px;
+        transition: color 200ms ease-in;
       }
 
     .link:hover {
@@ -100,7 +101,13 @@ p, h1, h2, h3, h4, h5, a {
         text-align: center;
         color:white;
         letter-spacing: 2px;
+        transition: transform 200ms ease-in;
 
+    }
+
+    .Reason:hover,
+    .Reason:focus {
+      transform: scale(1.05);
     }
 
     .Reason > h1 {
@@ -131,7 +138,6 @@ p, h1, h2, h3, h4, h5, a {
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      border-radius: 35px 0 0 0;
     }
   
   .Asia {
