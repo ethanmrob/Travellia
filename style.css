@@ -154,7 +154,7 @@ p, h1, h2, h3, h4, h5, a {
   
   .Footer {
       grid-area: Footer; 
-      background-color:gainsboro;
+      background-color:black;
     }
   
   .Call-to-Action { 
