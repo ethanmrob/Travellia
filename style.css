@@ -11,16 +11,18 @@ p, h1, h2, h3, h4, h5, a {
 .container {
     height:auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1.5fr 1fr 0.5fr 1fr 1fr;
-    grid-template-rows: 0.4fr 1fr 1fr 1fr 2fr 0.6fr;
+    gap:10px 0;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.18fr 1fr 1fr 0.8fr 1.5fr 1fr 1fr;
     grid-auto-flow: row;
     grid-template-areas:
-      "Logo Logo Header Header Header Header Header"
-      "Product Product Product Product Reason-1 Reason-1 Reason-1"
-      "Product Product Product Product Reason-2 Reason-2 Reason-2"
-      "Product Product Product Product Reason-3 Reason-3 Reason-3"
-      "Call-to-Action Call-to-Action Call-to-Action Call-to-Action Call-to-Action Call-to-Action Call-to-Action"
-      "Social-Media Social-Media Footer Footer Footer Footer Footer";
+      "Logo Logo Header Header Header Header Header Header Header"
+      "Product Product Product Product Product Product Product Product Product"
+      "Product Product Product Product Product Product Product Product Product"
+      "Reason-1 Reason-1 Reason-1 Reason-2 Reason-2 Reason-2 Reason-3 Reason-3 Reason-3"
+      "Team-Member Team-Member Team-Member Call-to-Action Call-to-Action Call-to-Action Call-to-Action Call-to-Action Call-to-Action"
+      "Testimonial Testimonial Testimonial Testimonial Testimonial Testimonial Testimonial Testimonial Testimonial"
+      "Social-Media Social-Media Footer Footer Footer Footer Footer Footer Footer";
   }
 
 
@@ -29,11 +31,10 @@ p, h1, h2, h3, h4, h5, a {
       grid-area: Logo; 
       align-items:center;
       justify-content: start;
-      background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(243,243,243,1) 100%);
+      background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgb(255, 255, 255) 100%);
    }
 
     #logo {
-        padding-bottom:5px;
         margin-left:50px;
         margin-right:10px;
        
@@ -41,10 +42,14 @@ p, h1, h2, h3, h4, h5, a {
 
     #logoText {
         font-family: 'Dancing Script', sans-serif;
-        font-size: 30px;
+        font-size: 28px;
         font-weight: 700;
         letter-spacing: 1px;
+        padding-top:5px;
         color:black;
+        background: -webkit-linear-gradient(180deg, #cc9577, #333);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
   .Header {
@@ -52,14 +57,15 @@ p, h1, h2, h3, h4, h5, a {
       display:flex;
       justify-content: flex-end;
       align-items: center;
-      background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgb(243, 243, 243) 100%);
+      margin-bottom:-10px;
+      background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgb(255, 255, 255) 100%);
     }
 
     .link {
         font-size:12px;
         width: auto;
         margin-right:90px;
-        font-weight:400 !important;
+        font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 2px;
         color:black;
@@ -69,39 +75,58 @@ p, h1, h2, h3, h4, h5, a {
       }
 
     .link:hover {
-        border-bottom: 2px solid #04859F;
-        color:#04859F;
+        border-bottom: 2px solid #8E5F46;
+        color:#8E5F46;
     }
   
   .Product {
-      grid-area: Product; 
-      background-image: linear-gradient(0deg, rgba(154, 166, 173, 0.1) 0%, rgba(255,255,255,1) 100%), url("https://images.pexels.com/photos/3935702/pexels-photo-3935702.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+      grid-area: Product;
+      display: flex;
+      background-image: linear-gradient(0deg, rgba(172, 51, 51, 0) 90%, rgba(255,255,255,1) 100%), url("https://images.pexels.com/photos/5966303/pexels-photo-5966303.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
       background-position: top;
       background-repeat: no-repeat;
       background-size: cover;
       text-align: center;
-      height:700px;
+      justify-content: center;
+      align-items: center;
+      height:800px;
     }
 
     .cursive {
         font-family: 'Dancing Script', sans-serif;
         font-size:70px;
-        color:darkslategray;
+        color:#8E5F46;
     }
 
     .heading {
-        color:darkslategray;
-        margin-top: 300px;
+      position:relative;
+      top:100px;
+      right:270px;
+      padding-top:20px;
+        color:black;
+        width:700px;
+        height:120px;
         font-weight:300;
         font-size: 30px;
+        background-color:rgb(255, 255, 255, 0.9);
+    }
+    .heading-border {
+      position:absolute;
+      top:500px;
+      left:70px;
+      width:695px;
+      height:130px;
+      border: 5px solid #8E5F46;
     }
 
     .Reason {
-        padding-top:55px;
+        padding-top:90px;
         text-align: center;
         color:white;
         letter-spacing: 2px;
         transition: transform 200ms ease-in;
+        margin:5px;
+        box-shadow: 5px 5px 5px #dfccc2;
 
     }
 
@@ -134,16 +159,17 @@ p, h1, h2, h3, h4, h5, a {
   .Europe { 
       grid-area: Reason-1; 
       background-color:#FFFFFA;
-      background-image: radial-gradient(circle, rgba(91, 109, 136, 0.3) 0%, rgba(110, 140, 158, 0.3) 100%), url("https://images.pexels.com/photos/2325446/pexels-photo-2325446.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+      background-image: radial-gradient(circle, rgba(107, 107, 107, 0.2) 0%, rgba(142,95,70,0.1) 100%), url("https://images.pexels.com/photos/4388164/pexels-photo-4388164.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+      margin-left:10px;
     }
   
   .Asia {
       grid-area: Reason-2;
       background-color:#DDDEE3; 
-      background-image: radial-gradient(circle, rgba(91, 109, 136, 0.3) 0%, rgba(110, 140, 158, 0.3) 100%), url("https://images.pexels.com/photos/1531660/pexels-photo-1531660.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+      background-image: radial-gradient(circle, rgba(107, 107, 107, 0.2) 0%, rgba(142,95,70,0.1) 100%), url("https://images.pexels.com/photos/6440083/pexels-photo-6440083.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
       background-position: top;
       background-repeat: no-repeat;
       background-size: cover;
@@ -152,10 +178,11 @@ p, h1, h2, h3, h4, h5, a {
   .Africa {
       grid-area: Reason-3; 
       background-color:#65697B;
-      background-image: radial-gradient(circle, rgba(91, 109, 136, 0.3) 0%, rgba(110, 140, 158, 0.3) 100%), url("https://images.pexels.com/photos/3873663/pexels-photo-3873663.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+      background-image: radial-gradient(circle, rgba(107, 107, 107, 0.2) 0%, rgba(142,95,70,0.1) 100%), url("https://images.pexels.com/photos/4577147/pexels-photo-4577147.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
       background-position: bottom;
       background-repeat: no-repeat;
       background-size: cover;
+      margin-right:10px;
     }
   
   .Footer {
@@ -165,10 +192,10 @@ p, h1, h2, h3, h4, h5, a {
   
   .Call-to-Action { 
       grid-area: Call-to-Action;
-      background-color: darkslategray;
+      background-color: white;
       text-align: center;
-      padding:110px 200px 0 200px;
-      color:white;
+      padding:100px 200px 0 200px;
+      color:#8E5F46;
     }
 
     .Call-to-Action > h1 {
@@ -178,10 +205,30 @@ p, h1, h2, h3, h4, h5, a {
     }
 
     .Call-to-Action > p {
+      color: #28292A;
       text-align: justify;
-      line-height: 25px;
-      font-weight:400;
-      letter-spacing: 1px;
+      line-height: 22px;
+      font-weight:500;
+      margin:30px 0;
+    }
+
+    .Call-to-Action button {
+      color:#8E5F46;
+      border-color: #8E5F46;
+    }
+
+    .Team-Member {
+      grid-area: Team-Member;
+      background-color:orange;
+      background-image: url("https://images.pexels.com/photos/5966342/pexels-photo-5966342.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .Testimonial {
+      grid-area: Testimonial;
+      background-color: purple;
     }
   
   .Social-Media { 
