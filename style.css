@@ -11,9 +11,9 @@ p, h1, h2, h3, h4, h5, a {
 .container {
     height:auto;
     display: grid;
-    gap:10px 0;
+    gap:30px 0;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.18fr 1fr 1fr 0.8fr 1.5fr 1.5fr 1fr;
+    grid-template-rows: 0.18fr 1fr 1fr 0.8fr 1.5fr 1.5fr 1.5fr 0.5fr;
     grid-auto-flow: row;
     grid-template-areas:
       "Logo Logo Header Header Header Header Header Header Header"
@@ -22,7 +22,8 @@ p, h1, h2, h3, h4, h5, a {
       "Reason-1 Reason-1 Reason-1 Reason-2 Reason-2 Reason-2 Reason-3 Reason-3 Reason-3"
       "Team-Member Team-Member Team-Member Call-to-Action Call-to-Action Call-to-Action Call-to-Action Call-to-Action Call-to-Action"
       "Testimonial Testimonial Testimonial Testimonial Testimonial Testimonial Testimonial Testimonial Testimonial"
-      "Social-Media Social-Media Footer Footer Footer Footer Footer Footer Footer";
+      "Contact-Us Contact-Us Contact-Us Contact-Us Contact-Us Contact-Us Social-Media Social-Media Social-Media"
+      "Footer Footer Footer Footer Footer Footer Footer Footer Footer";
   }
 
 
@@ -124,8 +125,8 @@ p, h1, h2, h3, h4, h5, a {
         text-align: center;
         color:white;
         letter-spacing: 2px;
-        transition: transform 200ms ease-in;
-        margin:5px;
+        transition: all 400ms ease-in;
+        margin:15px;
         box-shadow: 5px 5px  #bbb2ad;
 
     }
@@ -169,7 +170,7 @@ p, h1, h2, h3, h4, h5, a {
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      margin-left:10px;
+      margin-left:30px;
     }
   
   .Asia {
@@ -188,14 +189,9 @@ p, h1, h2, h3, h4, h5, a {
       background-position: bottom;
       background-repeat: no-repeat;
       background-size: cover;
-      margin-right:10px;
+      margin-right:30px;
     }
-  
-  .Footer {
-      grid-area: Footer; 
-      background-color:gainsboro;
-    }
-  
+
   .Call-to-Action { 
       grid-area: Call-to-Action;
       background-color: white;
@@ -242,7 +238,7 @@ p, h1, h2, h3, h4, h5, a {
       display:flex;
       grid-area: Testimonial;
       background-color: purple;
-      background: linear-gradient(205deg, rgba(104, 102, 102, 0.8) 0%, rgba(104, 76, 60, 0.8) 100%), url("https://images.pexels.com/photos/5967540/pexels-photo-5967540.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+      background: linear-gradient(205deg, rgba(104, 102, 102, 0.4) 0%, rgba(104, 76, 60, 0.4) 100%), url("https://images.pexels.com/photos/5967540/pexels-photo-5967540.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -261,10 +257,11 @@ p, h1, h2, h3, h4, h5, a {
     }
 
     .Testimonial h3 {
+      font-style: italic;
       position:absolute;
       font-weight:400;
       letter-spacing: 1px;
-      font-size:20px;
+      font-size:18px;
       line-height: 22px;
       color:white;
       padding:50px;
@@ -276,14 +273,28 @@ p, h1, h2, h3, h4, h5, a {
     }
 
     .signature {
+      font-style:normal;
       color:#8E5F46;
       margin-left:30px;
       font-family: 'Dancing Script', cursive;
       font-size: 30px;
     }
+
+    
+  .Contact-Us {
+      grid-area: Contact-Us; 
+      background-color:white;
+    }
+
+  #form {
+    
+  }
   
   .Social-Media { 
       grid-area: Social-Media;
-      background-color: gray; 
+      background-image: url("https://images.pexels.com/photos/5966900/pexels-photo-5966900.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"); 
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
   
