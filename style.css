@@ -113,7 +113,7 @@ p, h1, h2, h3, h4, h5, a {
     }
     .heading-border {
       position:absolute;
-      top:500px;
+      top:515px;
       left:70px;
       width:695px;
       height:130px;
@@ -127,7 +127,12 @@ p, h1, h2, h3, h4, h5, a {
         letter-spacing: 2px;
         transition: all 400ms ease-in;
         margin:15px;
-        box-shadow: 5px 5px  #bbb2ad;
+        box-shadow:
+          0 1px 3.5px rgba(0, 0, 0, 0.025),
+          0 3.4px 15.7px rgba(0, 0, 0, 0.081),
+          0 15px 21px rgba(0, 0, 0, 0.26)
+        ;
+        border-radius: 15px;
 
     }
 
@@ -197,10 +202,10 @@ p, h1, h2, h3, h4, h5, a {
       background-color: white;
       text-align: center;
       padding:100px 200px 0 200px;
-      color:#8E5F46;
     }
 
-    .Call-to-Action > h1 {
+    .headerText {
+      color:#8E5F46;
       font-family: 'Dancing Script', cursive;
       font-size:50px;
       font-weight:700;
@@ -238,7 +243,7 @@ p, h1, h2, h3, h4, h5, a {
       display:flex;
       grid-area: Testimonial;
       background-color: purple;
-      background: linear-gradient(205deg, rgba(104, 102, 102, 0.4) 0%, rgba(104, 76, 60, 0.4) 100%), url("https://images.pexels.com/photos/5967540/pexels-photo-5967540.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+      background: linear-gradient(0deg, rgba(207, 207, 207, 0.1) 95%, rgb(61, 61, 61, 0.6) 100%), url("https://images.pexels.com/photos/5967540/pexels-photo-5967540.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -284,12 +289,48 @@ p, h1, h2, h3, h4, h5, a {
   .Contact-Us {
       grid-area: Contact-Us; 
       background-color:white;
+      justify-content: center;
+      justify-items: center;
+      width:70%;
+      margin: 0 auto;
+      position:relative;
+      top:50px;
     }
 
-  #form {
-    
+    .Contact-Us p {
+      font-weight: 400;
+      margin: 10px 0;
+    }
+
+    .contactform {
+      margin-top:30px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+  input[type=text], input[type=email], textarea {
+    width:100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top:6px;
+    margin-bottom:16px;
+    resize:vertical;
   }
-  
+
+  input[type=submit] {
+    color:#8E5F46;
+    border-color: #8E5F46;
+  }
+
+  input[type=submit]:hover {
+    color:white;
+    background-color:#8E5F46;
+  }
+
+  input[type=text]::placeholder, input[type=email]::placeholder, textarea::placeholder {
+    font-family: 'Montserrat', sans-serif;
+  }
   .Social-Media { 
       grid-area: Social-Media;
       background-image: url("https://images.pexels.com/photos/5966900/pexels-photo-5966900.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"); 
@@ -297,4 +338,6 @@ p, h1, h2, h3, h4, h5, a {
       background-repeat: no-repeat;
       background-size: cover;
     }
+
+    
   
