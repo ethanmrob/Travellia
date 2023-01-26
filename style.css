@@ -11,16 +11,16 @@ p, h1, h2, h3, h4, h5, a {
 .container {
     height:auto;
     display: grid;
-    gap:30px 0;
+    gap:30px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.18fr 1fr 1fr 0.8fr 1.5fr 1.5fr 1.5fr 0.5fr;
+    grid-template-rows: 0.18fr 1fr 1fr 1.5fr 0.8fr 1.5fr 1.5fr 0.5fr;
     grid-auto-flow: row;
     grid-template-areas:
       "Logo Logo Header Header Header Header Header Header Header"
       "Product Product Product Product Product Product Product Product Product"
       "Product Product Product Product Product Product Product Product Product"
-      "Reason-1 Reason-1 Reason-1 Reason-2 Reason-2 Reason-2 Reason-3 Reason-3 Reason-3"
       "Team-Member Team-Member Team-Member Call-to-Action Call-to-Action Call-to-Action Call-to-Action Call-to-Action Call-to-Action"
+      "Reason-1 Reason-1 Reason-1 Reason-2 Reason-2 Reason-2 Reason-3 Reason-3 Reason-3"
       "Testimonial Testimonial Testimonial Testimonial Testimonial Testimonial Testimonial Testimonial Testimonial"
       "Contact-Us Contact-Us Contact-Us Contact-Us Contact-Us Contact-Us Social-Media Social-Media Social-Media"
       "Footer Footer Footer Footer Footer Footer Footer Footer Footer";
@@ -126,7 +126,7 @@ p, h1, h2, h3, h4, h5, a {
         color:white;
         letter-spacing: 2px;
         transition: all 400ms ease-in;
-        margin:15px;
+        margin:30px 15px;
         box-shadow:
           0 1px 3.5px rgba(0, 0, 0, 0.025),
           0 3.4px 15.7px rgba(0, 0, 0, 0.081),
@@ -337,6 +337,8 @@ p, h1, h2, h3, h4, h5, a {
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+      border-radius:46% 54% 34% 66% / 63% 27% 73% 37%;
+      margin-right:50px;
     }
 
     
